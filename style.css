@@ -1,0 +1,543 @@
+/* GLOBAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b1020;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+section {
+    padding: 80px 10%;
+}
+img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+h1,
+h2,
+h3 {
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 15px;
+}
+
+/* HEADER AND NAVIGATION */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(11, 16, 32, 0.92);
+    backdrop-filter: blur(8px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.main-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 10%;
+}
+
+.site-logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #f4ede4;
+}
+
+.navigation-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.navigation-links a {
+    position: relative;
+
+    color: #c7ccd8;
+    text-decoration: none;
+
+    font-size: 0.98rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.navigation-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #c58b5a;
+
+    transition: width 0.3s ease;
+}
+
+.navigation-links a:hover {
+    color: #ffffff;
+}
+
+.navigation-links a:hover::after {
+    width: 100%;
+}
+
+.mobile-menu-btn {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+/* LANDING SECTION */
+
+.space-intro {
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('images and videos/stars.avif');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 750px;
+}
+
+.space-intro h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.space-intro p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d9dce4;
+}
+
+.explore-btn {
+    display: inline-block;
+
+    background-color: #c58b5a;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 14px 28px;
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #e0b089;
+    transform: translateY(-2px);
+}
+
+/* GALAXY SECTION */
+
+.galaxy-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.galaxy-description p {
+    color: #c9ced8;
+}
+
+.galaxy-photo img {
+    box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+
+/* PLANETS SECTION */
+
+.planet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.planet-box {
+    background-color: #141b2f;
+
+    padding: 20px;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+.planet-box:hover {
+    transform: translateY(-8px);
+}
+
+.planet-box h3 {
+    margin-top: 15px;
+}
+
+.planet-box p {
+    color: #c9ced8;
+}
+
+.learn-link {
+    display: inline-block;
+    margin-top: 10px;
+
+    color: #d8a679;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.learn-link:hover {
+    color: white;
+}
+
+/* EARTH SECTION */
+
+.earth-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.earth-details ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.earth-details li {
+    margin-bottom: 10px;
+    color: #c9ced8;
+}
+
+#factBtn {
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #c58b5a;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+#factBtn:hover {
+    background-color: #e0b089;
+}
+
+#factText {
+    margin-top: 15px;
+    color: #d8a679;
+    font-weight: bold;
+}
+
+/* MEDIA SECTION */
+
+.media-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.space-video iframe {
+    width: 100%;
+    height: 400px;
+
+    border: none;
+    border-radius: 12px;
+}
+
+.media-description p {
+    color: #c9ced8;
+}
+
+/* REVIEWS SECTION */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    background-color: #141b2f;
+
+    padding: 25px;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card p {
+    color: #c9ced8;
+    font-style: italic;
+}
+
+.review-card h3 {
+    margin-top: 20px;
+    color: #d8a679;
+    font-size: 1rem;
+}
+
+/* CONTACT SECTION */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.message-form {
+    background-color: #141b2f;
+
+    padding: 30px;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-form label {
+    font-weight: bold;
+}
+
+.message-form input,
+.message-form textarea {
+    padding: 12px;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 1rem;
+}
+
+.message-form textarea {
+    resize: vertical;
+}
+
+.message-form button {
+    background-color: #c58b5a;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 12px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+    background-color: #e0b089;
+}
+
+.contact-details {
+    background-color: #141b2f;
+
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.contact-details p {
+    color: #c9ced8;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #05070f;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    color: #9da3b0;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .galaxy-info,
+    .planet-grid,
+    .earth-layout,
+    .media-layout,
+    .reviews-grid,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .space-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .navigation-links {
+        position: absolute;
+
+        top: 80px;
+        right: 0;
+
+        width: 100%;
+
+        background-color: #111827;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 25px 0;
+
+        display: none;
+    }
+
+    .navigation-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+/* VENUS PAGE THEME */
+
+.planet-section ul {
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.planet-section li {
+    margin-bottom: 10px;
+    color: #c9ced8;
+}
+
+.planet-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* BETTER SPACING FOR REVIEW CARDS */
+.review-card h3 {
+    color: #d8a679;
+    margin-bottom: 15px;
+}
+
+/* SMOOTH IMAGE HOVER EFFECT */
+.galaxy-photo img,
+.earth-image img,
+.planet-box img {
+    transition: transform 0.3s ease;
+}
+
+.galaxy-photo img:hover,
+.earth-image img:hover,
+.planet-box img:hover {
+    transform: scale(1.03);
+}
+/* VENUS IMAGE */
+.galaxy-photo img,
+.earth-image img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* OVERLAY FOR VENUS PAGE */
+.venus-theme .space-intro {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('images and videos/satellite view.avif');
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* NEPTUNE THEME */
+
+.neptune-theme .space-intro {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url('images and videos/Neptune_Full.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* NEPTUNE COLOR THEME */
+.neptune-theme .learn-link,
+.neptune-theme #factText {
+    color: #4fc3f7;
+}
+
+.neptune-theme .explore-btn,
+.neptune-theme #factBtn,
+.neptune-theme .message-form button {
+    background-color: #4fc3f7;
+    color: #000;
+}
+
+.neptune-theme .explore-btn:hover,
+.neptune-theme #factBtn:hover,
+.neptune-theme .message-form button:hover {
+    background-color: #ffffff;
+}
+
+/* NEPTUNE HEADINGS */
+.neptune-theme h1,
+.neptune-theme h2 {
+    color: #b3e5fc;
+}
